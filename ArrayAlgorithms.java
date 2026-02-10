@@ -109,6 +109,10 @@ public class ArrayAlgorithms {
          a++;
          }
       }
+      for(int i = 0; i < storedValue6; i++) {
+      intArray2[a] = 0;
+      a++;
+      }
       return intArray2;
    }
    
