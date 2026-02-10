@@ -10,6 +10,8 @@ public class ArrayAlgorithms {
    public int storedValue5;
    public int storedValue6;
    public int storedValue7;
+   public int b;
+   public int c;
    public String list = "";
 
    /*
@@ -52,16 +54,17 @@ public class ArrayAlgorithms {
       // REQUIRED: return true if there are duplicate values in the array
       // HINT: use a nested for loop
       for(int i = 0; i < intArray.length; i++) {
-            for(int x = 0; x < intArray.length; x++) {
-               int a = intArray[x];
-                  if(a == intArray[i]) {
-                  return true;
-                  }
+         for(int x = 0; x < intArray.length; x++) {
+            if(intArray[b] == intArray[x] && x != b) {
+            return true;
             }
-     }
-     return false;
-   }
-
+         }
+      if(b < intArray.length) {
+      b++;
+      }
+      }
+      return false;
+      }
    public boolean isInArray(int intToFind) {
       // REQUIRED: return true if intToFind is in intArray.
       // NOTE: Use an enhanced for loop for this method
@@ -117,9 +120,18 @@ public class ArrayAlgorithms {
    }
    
    public String toString() {
+      if(c < 1) {
          for(int i = 0; i < intArray.length; i++) {
          list += intArray[i]+", ";
          }
+         c++;
+      }
+      else { 
+      list = "";
+         for(int i = 0; i < intArray.length; i++) {
+         list += intArray2[i]+", ";
+         }
+      }
       return "{ "+list+" }";
       }
    public static void main(String[] args) {
@@ -132,9 +144,10 @@ public class ArrayAlgorithms {
       arrayAlgorithm.populateArrayWithRandom();
       System.out.println(arrayAlgorithm.findMax());
       System.out.println(arrayAlgorithm.hasDuplicates());
-      System.out.println(arrayAlgorithm.isInArray(10));
+      System.out.println(arrayAlgorithm.isInArray(67));
       System.out.println(arrayAlgorithm.longestContiguousSubarray());
-      System.out.println(arrayAlgorithm.moveZeroesToEnd());
+      arrayAlgorithm.moveZeroesToEnd();
+      System.out.println(arrayAlgorithm);
       System.out.println(arrayAlgorithm);
    }
 }
