@@ -3,7 +3,7 @@ public class ArrayAlgorithms {
    // DO NOT CHANGE THE VARIABLE NAME
    private int[] intArray;
    public int[] intArray2;
-   public int storedValue;
+   public int storedValue = -2147483647;
    public int storedValue2;
    public int storedValue3;
    public int storedValue4;
@@ -87,7 +87,7 @@ public class ArrayAlgorithms {
             if(storedValue4 > storedValue5) {
                storedValue5 = storedValue4;
             }
-            storedValue4 = 0;
+            storedValue4 = 1;
             storedValue3 = 0;
          }
      }
@@ -111,6 +111,7 @@ public class ArrayAlgorithms {
       }
       return intArray2;
    }
+   
    public String toString() {
          for(int i = 0; i < intArray.length; i++) {
          list += intArray[i]+", ";
